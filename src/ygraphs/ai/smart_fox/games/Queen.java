@@ -46,8 +46,8 @@ public class Queen extends Tile implements Cloneable{
      * @param col: an int containing the column position of the Queen
      */
     public void moveQueen(int row, int col) {
-        this.previousRow = qRow;
-        this.previousCol = qCol;
+        this.previousRow = super.row;
+        this.previousCol = super.col;
         super.row = row;
         super.col = col;
     }

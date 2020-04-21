@@ -1,6 +1,6 @@
 package ygraphs.ai.smart_fox.games;
 
-public class Arrow extends Tile implements Cloneable {
+public class Arrow extends ygraphs.ai.smart_fox.games.Tile implements Cloneable {
 	protected Arrow clone() {
         Arrow aNew = new Arrow(row, col);
         return aNew;

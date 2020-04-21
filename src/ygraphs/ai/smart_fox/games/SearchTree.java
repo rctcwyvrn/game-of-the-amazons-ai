@@ -182,44 +182,46 @@ public class SearchTree {
      */
     public SearchTreeNode makeMove() {
         /* "Thresholding" based off the number of moves we have
-            in order to increase our likelyhood of winning
+            in order to increase our likelihood of winning
          */
-        if(numOfMoves <= 20) {
-            this.expandFrontier();
-            this.trimFrontier();
-        }
+        this.expandFrontier();
+        this.trimFrontier();
+//        if(numOfMoves <= 20) {
+//            this.expandFrontier();
+//            this.trimFrontier();
+//        }
 
-        else if(numOfMoves > 20 && numOfMoves <= 30) {
-            this.expandFrontier();
-            this.trimFrontier();
-            this.expandFrontier();
-
-        }
-        else if(numOfMoves > 30 && numOfMoves <= 45) {
-            this.expandFrontier();
-            this.trimFrontier();
-            this.expandFrontier();
-            this.trimFrontier();
-
-        }
-        else if(numOfMoves > 45 && numOfMoves <= 60) {
-            this.expandFrontier();
-            this.trimFrontier();
-            this.expandFrontier();
-            this.trimFrontier();
-            this.expandFrontier();
-            this.trimFrontier();
-        }
-        else if(numOfMoves > 60) {
-            this.expandFrontier();
-            this.expandFrontier();
-            this.trimFrontier();
-            this.expandFrontier();
-            this.trimFrontier();
-            this.expandFrontier();
-            this.trimFrontier();
-
-        }
+//        else if(numOfMoves > 20 && numOfMoves <= 30) {
+//            this.expandFrontier();
+//            this.trimFrontier();
+//            this.expandFrontier();
+//
+//        }
+//        else if(numOfMoves > 30 && numOfMoves <= 45) {
+//            this.expandFrontier();
+//            this.trimFrontier();
+//            this.expandFrontier();
+//            this.trimFrontier();
+//
+//        }
+//        else if(numOfMoves > 45 && numOfMoves <= 60) {
+//            this.expandFrontier();
+//            this.trimFrontier();
+//            this.expandFrontier();
+//            this.trimFrontier();
+//            this.expandFrontier();
+//            this.trimFrontier();
+//        }
+//        else if(numOfMoves > 60) {
+//            this.expandFrontier();
+//            this.expandFrontier();
+//            this.trimFrontier();
+//            this.expandFrontier();
+//            this.trimFrontier();
+//            this.expandFrontier();
+//            this.trimFrontier();
+//
+//        }
 
         this.performAlphaBeta();
         SearchTreeNode bestMove = this.getMoveAfterAlphaBeta();
